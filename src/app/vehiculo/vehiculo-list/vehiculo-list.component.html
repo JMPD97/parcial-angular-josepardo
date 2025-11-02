@@ -34,6 +34,15 @@
     <div class="future-table"></div>
   </div>
 
+  <!-- RESULTADOS POR MARCA - FUERA del contenedor de tabla -->
+  <div class="tables-container">
+    <div class="resumen-sin-estilos">
+      <div *ngFor="let marca of objectKeys(totalesPorMarca)">
+        Total {{ marca }}: {{ totalesPorMarca[marca] }}
+      </div>
+    </div>
+  </div>
+
   <!-- Resto con márgenes -->
   <div class="container-margins">
     <div *ngIf="vehiculos.length === 0" class="alert alert-info text-center">
