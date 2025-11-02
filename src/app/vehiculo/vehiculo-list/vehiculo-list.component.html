@@ -1,0 +1,48 @@
+<div class="container-fluid mt-4">
+  <!-- Encabezado con márgenes -->
+  <div class="container-margins">
+    <h1 class="main-title">TuSegundazo.com</h1>
+    <div class="header-line"></div>
+    <img src="../../../assets/image1 1.png" 
+         alt="COMERCIALIZACIÓN DE AUTOMOTORES NUEVOS Y USADOS" 
+         class="header-image">
+    <div class="header-line"></div>
+  </div>
+  
+  <!-- TABLAS SIN contenedor de márgenes -->
+  <div class="tables-container">
+    <div class="table-responsive">
+      <table class="custom-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Marca</th>
+            <th>Línea</th>
+            <th>Modelo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let vehiculo of vehiculos; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ vehiculo.marca }}</td>
+            <td>{{ vehiculo.linea }}</td>
+            <td>{{ vehiculo.modelo }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="future-table"></div>
+  </div>
+
+  <!-- Resto con márgenes -->
+  <div class="container-margins">
+    <div *ngIf="vehiculos.length === 0" class="alert alert-info text-center">
+      Cargando vehículos...
+    </div>
+    <div class="text-center mt-5 pt-4 border-top">
+      <p class="text-muted">
+        Contact us: +57 3102105253 - info&#64;tusegundazo.com • &#64;tusegundazo
+      </p>
+    </div>
+  </div>
+</div>
