@@ -1,5 +1,4 @@
 <div class="container-fluid mt-4">
-  <!-- Encabezado con márgenes -->
   <div class="container-margins">
     <h1 class="main-title">TuSegundazo.com</h1>
     <div class="header-line"></div>
@@ -9,7 +8,6 @@
     <div class="header-line"></div>
   </div>
   
-  <!-- TABLAS SIN contenedor de márgenes -->
   <div class="tables-container">
     <div class="table-responsive">
       <table class="custom-table">
@@ -34,7 +32,7 @@
     <div class="future-table"></div>
   </div>
 
-  <!-- RESULTADOS POR MARCA - FUERA del contenedor de tabla -->
+
   <div class="tables-container">
     <div class="resumen-sin-estilos">
       <div *ngFor="let marca of objectKeys(totalesPorMarca)">
@@ -43,7 +41,7 @@
     </div>
   </div>
 
-  <!-- Resto con márgenes -->
+ 
   <div class="container-margins">
     <div *ngIf="vehiculos.length === 0" class="alert alert-info text-center">
       Cargando vehículos...
